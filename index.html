@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./staly.css">
+  <title>Feliz Dia Dos Namorados</title>
+</head>
+<body>
+  <div class="coracoes"></div>
+  <h1>Para o Amor da Minha Vida 💘</h1>
+
+  <section class="carta">
+    <h2>Minha Carta de Amor</h2>
+    <p id="mensagem"></p>
+  </section>
+
+  <section class="galeria-carousel">
+    <h2>Nossos Momentos</h2>
+    <img src="./assets/foto-bruno-2.png" alt="Foto 1">
+    <img src="./assets/foto-bruno-3.png" alt="Foto 2">
+    <img src="./assets/foto-bruno.png" alt="Foto 3">
+    <img src="./assets/belem.jpeg" alt="Foto 4">
+    <img src="./assets/foto-belem.jpeg" alt="Foto 5">
+    <img src="./assets/praia.jpeg" alt="Foto 6">
+    <img src="./assets/rio.jpeg" alt="Foto 7">
+    <img src="./assets/WhatsApp Image 2025-06-03 at 20.50.10 (1).jpeg" alt="Foto 8">
+    <img src="./assets/WhatsApp Image 2025-06-03 at 20.50.11 (1).jpeg" alt="Foto 9">
+    <img src="./assets/WhatsApp Image 2025-06-03 at 20.50.11 (2).jpeg" alt="Foto 10">
+  </section>
+
+  <section class="linha-tempo">
+    <h2>Nossa História</h2>
+    <div class="momento">
+      <img src="./assets/primeiro.jpeg" alt="Primeiro encontro">
+      <p>19/01/2020 - Nosso primeiro encontro</p>
+    </div>
+    <div class="momento">
+      <img src="./assets/viagem-praia.jpeg" alt="Viagem Juntos">
+      <p>28/12/2022 - Nossa viagem inesquecível</p>
+    </div>
+  </section>
+
+  <section class="musica">
+    <h2>Nossa Música</h2>
+    <audio controls>
+      <source src="musica.mp3" type="audio/mp3">
+      Seu navegador não suporta áudio.
+    </audio>
+  </section>
+
+  <section class="surpresinhas">
+    <h2>Surpresinhas 💝</h2>
+    <button onclick="alert('Porque você me faz sorrir todos os dias!')">1 Motivo para te amar</button>
+    <button onclick="alert('Lembra daquele pôr do sol juntos?')">Lembrança Especial</button>
+    <button onclick="mostrarMensagemSecreta()">Mensagem Secreta</button>
+    <div class="mensagem-oculta" id="mensagemOculta">
+      <p>Você é a razão do meu sorriso, a paz do meu dia e o amor da minha vida. Te amo eternamente! 💖</p>
+    </div>
+  </section>
+
+  <section class="promessa">
+    <h2>Minha Promessa</h2>
+    <p>Prometo te amar e cuidar de você todos os dias da minha vida. ❤️</p>
+  </section>
+
+  <section class="quiz">
+    <h2>Quiz do Amor</h2>
+    <p>Quem disse "eu te amo" primeiro?</p>
+    <button onclick="alert('Você! E foi o momento mais lindo.')">Você</button>
+    <button onclick="alert('Na verdade... fui eu 😅')">Eu</button>
+  </section>
+
+  <section class="jogo">
+  <h2>Joguinho: Memória do Amor</h2>
+  <div id="memoria" style="max-width:400px; margin:auto; display:grid; grid-template-columns: repeat(5, 1fr); gap: 10px;"></div>
+  <button onclick="iniciarMemoria()">Reiniciar Jogo</button>
+</section>
+</body>
+<script src="./script.js"></script>
+</html>
