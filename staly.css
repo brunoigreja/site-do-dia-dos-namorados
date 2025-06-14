@@ -1,191 +1,251 @@
  @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap');
 
- 
- 
- 
+
+
+
  * {
-      box-sizing: border-box;
-      text-align: center;
-       font-family: "Edu SA Hand", cursive;
-    }
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #ffe4e1, #ffb6c1);
-      color: #333;
-      overflow-x: hidden;
-    }
-    h1, h2 {
-      text-align: center;
-      font-family: 'Great Vibes', cursive;
-    }
-    .quiz {
-      text-align: center;
-    }
-    section {
-      padding: 2rem 1rem;
-    }
-    .carta {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      animation: fadeIn 3s ease-in-out;
-      padding: 1rem;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    .galeria-carousel {
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      position: relative;
-    }
-    .galeria-carousel-track {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: deslizar-vertical 30s linear infinite;
-    }
-    .galeria-carousel:hover .galeria-carousel-track {
-      animation-play-state: paused;
-    }
-    .galeria-carousel img {
-      width: 90vw;
-      /*max-width: 300px;*/
-      height: auto;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      margin-right: 10px;
-      flex-shrink: 0;
-    }
-    @keyframes deslizar {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .linha-tempo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    .momento {
-      text-align: center;
-      width: 90%;
-      max-width: 300px;
-    }
-    .momento img {
-      width: 100%;
-      border-radius: 12px;
-    }
-    audio {
-      width: 100%;
-      max-width: 300px;
-      display: block;
-      margin: 0 auto;
-    }
-    button {
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #ff69b4;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #ff1493;
-    }
-    .coracoes {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 0;
-    }
-    .coracao {
-      position: absolute;
-      color: red;
-      animation: cair 6s linear infinite;
-    }
-    @keyframes cair {
-      0% { transform: translateY(-100px); opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
-    #memoria {
-  max-width: 400px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  gap: 10px;
-  padding: 0 10px;
-}
+   box-sizing: border-box;
+   text-align: center;
+   font-family: "Edu SA Hand", cursive;
+ }
 
-.carta-memoria {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* para manter quadrado proporcional */
-  cursor: pointer;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  background-color: #ffb6c1;
-  user-select: none;
-  perspective: 1000px;
-}
+ body {
+   margin: 0;
+   font-family: 'Arial', sans-serif;
+   background: linear-gradient(to right, #ffe4e1, #ffb6c1);
+   color: #333;
+   overflow-x: hidden;
+ }
 
-.carta-memoria > div,
-.carta-memoria > img {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  border-radius: 12px;
-  backface-visibility: hidden;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
-}
+ h1,
+ h2 {
+   text-align: center;
+   font-family: 'Great Vibes', cursive;
+ }
 
-    .mensagem-oculta {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: #fff0f5;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: none;
-      animation: fadeIn 2s ease-in-out;
-    }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      p {
-        text-align: center;
-      }
-      button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
-      .galeria-carousel-track {
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
-      }
-      .galeria-carousel img {
-        width: 90vw;
-        height: auto;
-      }
-    }
+ .spotify-player {
+   max-width: 400px;
+   margin: 20px auto;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+   border-radius: 12px;
+   overflow: hidden;
+
+ }
+
+ .quiz {
+   text-align: center;
+ }
+
+ section {
+   padding: 2rem 1rem;
+ }
+
+ .carta {
+   max-width: 600px;
+   margin: auto;
+   background: white;
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   animation: fadeIn 3s ease-in-out;
+   padding: 1rem;
+ }
+
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ .galeria-carousel {
+   max-width: 100%;
+   margin: auto;
+   overflow: hidden;
+   position: relative;
+ }
+
+ .galeria-carousel-track {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   animation: deslizar-vertical 30s linear infinite;
+ }
+
+ .galeria-carousel:hover .galeria-carousel-track {
+   animation-play-state: paused;
+ }
+
+ .galeria-carousel img {
+   width: 90vw;
+   /*max-width: 300px;*/
+   height: auto;
+   object-fit: cover;
+   border-radius: 12px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   margin-right: 10px;
+   flex-shrink: 0;
+ }
+
+ @keyframes deslizar {
+   0% {
+     transform: translateX(0);
+   }
+
+   100% {
+     transform: translateX(-50%);
+   }
+ }
+
+ .linha-tempo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+ }
+
+ .momento {
+   text-align: center;
+   width: 90%;
+   max-width: 300px;
+ }
+
+ .momento img {
+   width: 100%;
+   border-radius: 12px;
+ }
+
+ audio {
+   width: 100%;
+   max-width: 300px;
+   display: block;
+   margin: 0 auto;
+ }
+
+ button {
+   margin: 0.5rem;
+   padding: 0.5rem 1rem;
+   border: none;
+   border-radius: 8px;
+   background-color: #ff69b4;
+   color: white;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background 0.3s;
+ }
+
+ button:hover {
+   background-color: #ff1493;
+ }
+
+ .coracoes {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+   overflow: hidden;
+   z-index: 0;
+ }
+
+ .coracao {
+   position: absolute;
+   color: red;
+   animation: cair 6s linear infinite;
+ }
+
+ @keyframes cair {
+   0% {
+     transform: translateY(-100px);
+     opacity: 1;
+   }
+
+   100% {
+     transform: translateY(100vh);
+     opacity: 0;
+   }
+ }
+
+ #memoria {
+   max-width: 400px;
+   margin: auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+   gap: 10px;
+   padding: 0 10px;
+ }
+
+ .carta-memoria {
+   position: relative;
+   width: 100%;
+   padding-top: 100%;
+   /* para manter quadrado proporcional */
+   cursor: pointer;
+   border-radius: 12px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   background-color: #ffb6c1;
+   user-select: none;
+   perspective: 1000px;
+ }
+
+ .carta-memoria>div,
+ .carta-memoria>img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   border-radius: 12px;
+   backface-visibility: hidden;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   object-fit: contain !important;
+ }
+
+ .mensagem-oculta {
+   max-width: 600px;
+   margin: 2rem auto;
+   background: #fff0f5;
+   border-radius: 12px;
+   padding: 1rem;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   display: none;
+   animation: fadeIn 2s ease-in-out;
+ }
+
+ @media (max-width: 600px) {
+   h1 {
+     font-size: 1.8rem;
+   }
+
+   h2 {
+     font-size: 1.5rem;
+   }
+
+   p {
+     text-align: center;
+   }
+
+   button {
+     font-size: 0.9rem;
+     padding: 0.4rem 0.8rem;
+   }
+
+   .galeria-carousel-track {
+     flex-direction: column;
+     align-items: center;
+     justify-items: center;
+     justify-content: center;
+   }
+
+   .galeria-carousel img {
+     width: 90vw;
+     height: auto;
+   }
+ }

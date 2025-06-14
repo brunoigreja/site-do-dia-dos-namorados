@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./staly.css">
   <title>Feliz Dia Dos Namorados</title>
 </head>
+
 <body>
   <div class="coracoes"></div>
   <h1>Para o Amor da Minha Vida 💘</h1>
+  <section class="musica">
+
+    <h2>Nossa Música</h2>
+    <iframe class=".spotify-player" style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/5tDIwLvi7AaoY4pkA7pUBv?utm_source=generator"
+      frameBorder="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    
+  </section>
 
   <section class="carta">
     <h2>Minha Carta de Amor</h2>
@@ -41,13 +52,7 @@
     </div>
   </section>
 
-  <section class="musica">
-    <h2>Nossa Música</h2>
-    <audio controls>
-      <source src="musica.mp3" type="audio/mp3">
-      Seu navegador não suporta áudio.
-    </audio>
-  </section>
+
 
   <section class="surpresinhas">
     <h2>Surpresinhas 💝</h2>
@@ -72,10 +77,12 @@
   </section>
 
   <section class="jogo">
-  <h2>Joguinho: Memória do Amor</h2>
-  <div id="memoria" style="max-width:400px; margin:auto; display:grid; grid-template-columns: repeat(5, 1fr); gap: 10px;"></div>
-  <button onclick="iniciarMemoria()">Reiniciar Jogo</button>
-</section>
+    <h2>Joguinho: Memória do Amor</h2>
+    <div id="memoria"
+      style="max-width:400px; margin:auto; display:grid; grid-template-columns: repeat(5, 1fr); gap: 10px;"></div>
+    <button onclick="iniciarMemoria()">Reiniciar Jogo</button>
+  </section>
 </body>
 <script src="./script.js"></script>
+
 </html>
